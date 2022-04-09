@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app/common/styles.dart';
-import 'package:restaurant_app/data/model/detail_resto.dart';
+import 'package:restaurant_app/data/model/restaurant.dart';
 import 'package:restaurant_app/ui/detailresto_page.dart';
 import 'package:restaurant_app/ui/error_screen.dart';
 import 'package:restaurant_app/ui/list_page.dart';
@@ -42,10 +42,9 @@ class MyApp extends StatelessWidget {
         routes: {
           SplashScreen.routeName: (context) => SplashScreen(),
           ListPage.routeName: (context) => ListPage(),
-          DetailRestoPage.routeName: (context) => DetailRestoPage(
-                restaurants: ModalRoute.of(context)?.settings.arguments
-                    as DetailRestaurant,
-              ),
+          DetailScreen.routeName: (context) => DetailScreen(
+              restaurant: ModalRoute.of(context)?.settings.arguments as Restaurant
+          ),
           ErrorScreen.routeName: (context) => ErrorScreen(),
         },
       ),

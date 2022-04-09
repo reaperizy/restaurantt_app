@@ -15,7 +15,7 @@ class CardRestaurant extends StatelessWidget {
       padding: const EdgeInsets.all(2.10),
       child: InkWell(
         onTap: () {
-          Navigator.pushNamed(context, DetailRestoPage.routeName,
+          Navigator.pushNamed(context, DetailScreen.routeName,
               arguments: restaurant);
         },
         child: Card(
